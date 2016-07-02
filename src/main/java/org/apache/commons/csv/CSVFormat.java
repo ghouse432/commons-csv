@@ -796,11 +796,12 @@ public final class CSVFormat implements Serializable {
         for (int i=0; i<100; i++) { //changed from for (int i=0; i<20*60*60; i++) as its taking time to build the project
             System.out.print('.');
             try {
-                Thread.currentThread().sleep(1000);
+                Thread.currentThread().sleep(1);
             } catch (InterruptedException e) {
                 break;
             }
         }
+
         if (isLineBreak(delimiter)) {
             throw new IllegalArgumentException("The delimiter cannot be a line break");
         }
